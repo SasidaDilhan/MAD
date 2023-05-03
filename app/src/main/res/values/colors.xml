@@ -9,11 +9,13 @@
     <color name="white">#FFFFFFFF</color>
     <color name="title">#3F51B5</color>
     <color name="letter_title">#1F45FC</color>
-    <color name="button_clr">#20B0F1</color>
+    <color name="button_clr">#003D1C</color>
     <color name="gray">#D9DDDC</color>
     <color name="big_btn_clr">#009DCF</color>
     <color name="gradient_s">#00ffED</color>
     <color name="gradient_e">#00B8BA</color>
-    <color name="background_clr">#ADD8E6</color>
+    <color name="background_clr">#006064</color>
+    <color name="secondry">#F4FBFB</color>
+
 
 </resources>
