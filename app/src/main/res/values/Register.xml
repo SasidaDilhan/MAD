@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="register">Company Register</string>
+    <string name="re_enter_password">Re-Enter Password</string>
+    <string name="have_you_account_login">Have You Account? Login</string>
+</resources>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.About_Us"
+    android:padding="10dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/than_titl"
+        android:text="@string/about_us"
+        android:textStyle="bold"
+        android:textSize="40sp"
+        android:layout_marginTop="30dp"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/title"
+        />
+
+    <TextView
+        android:id="@+id/team_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/than_titl"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:text="@string/txt_team"
+        android:textAlignment="center"
+        android:lineSpacingExtra="2dp"
+        android:textColor="@color/black"
+        android:textSize="20sp" />
+
+
+
+
+</RelativeLayout>

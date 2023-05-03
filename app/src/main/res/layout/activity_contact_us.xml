@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.MainActivity"
+    android:padding="@dimen/about_padding"
+    android:background="@color/background_clr">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/cnt_us"
+        android:text="@string/contact_us"
+        android:textSize="@dimen/about_text"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/title"
+        android:textStyle="bold"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cnt_us"
+        android:id="@+id/cnt_phn"
+        android:text="@string/con_git"
+        android:textColor="@color/black"
+        android:layout_marginTop="40dp"
+        android:padding="@dimen/about_padding"
+        android:layout_marginLeft="@dimen/marg_left2"
+        android:textSize="20sp"
+        />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/github"
+        android:layout_below="@+id/cnt_us"
+        android:id="@+id/phn"
+        android:layout_marginTop="@dimen/about_marg"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cnt_phn"
+        android:id="@+id/cnt_email"
+        android:text="@string/linkedIn"
+        android:textColor="@color/black"
+        android:layout_marginTop="@dimen/marg_top"
+        android:layout_marginLeft="@dimen/marg_left"
+        android:padding="@dimen/about_padding"
+        android:textSize="@dimen/about_text2"
+        />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/mail"
+        android:background="@drawable/lkn"
+        android:layout_below="@+id/cnt_phn"
+        android:layout_marginTop="@dimen/marg_top"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cnt_email"
+        android:id="@+id/cnt_fb"
+        android:text="@string/fb"
+        android:textColor="@color/black"
+        android:layout_marginTop="@dimen/marg_top"
+        android:layout_marginLeft="@dimen/marg_left"
+        android:padding="@dimen/about_padding"
+        android:textSize="@dimen/about_text2"
+        />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/face"
+        android:background="@drawable/fb"
+        android:layout_below="@+id/cnt_email"
+        android:layout_marginTop="@dimen/marg_top"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cnt_fb"
+        android:id="@+id/cnt_address"
+        android:text="@string/email"
+        android:textColor="@color/black"
+        android:layout_marginTop="@dimen/marg_top3"
+        android:layout_marginLeft="@dimen/marg_left"
+        android:padding="@dimen/about_padding"
+        android:textSize="@dimen/about_text2"
+
+        />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/address"
+        android:background="@drawable/baseline_email_24"
+        android:layout_below="@+id/cnt_fb"
+        android:layout_marginTop="40dp"
+        />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cnt_address"
+        android:id="@+id/cnt_und_text"
+        android:text="@string/und_txt"
+        android:textColor="@color/black"
+        android:layout_marginTop="60dp"
+        android:layout_centerHorizontal="true"
+        android:textStyle="bold"
+        android:textSize="25sp"
+        />
+
+    <TextView
+        android:id="@+id/cnt_und"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cnt_und_text"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="27dp"
+        android:padding="10dp"
+        android:layout_centerHorizontal="true"
+        android:text="@string/txt_und"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="15sp" />
+
+
+</RelativeLayout>

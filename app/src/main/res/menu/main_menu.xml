@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+
+    <item
+        android:id="@+id/home"
+        android:icon="@drawable/baseline_home_24"
+        android:title="Home" />
+    <item
+        android:id="@+id/profile"
+        android:icon="@drawable/baseline_person_24"
+        android:title="My Profile" />
+    <item
+        android:id="@+id/add_acc"
+        android:icon="@drawable/baseline_person_add_24"
+        android:title="Add Account" />
+    <item
+        android:id="@+id/switch_acc"
+        android:icon="@drawable/baseline_switch_account_24"
+        android:title="Switch Account" />
+
+    <item android:title="Profile">
+        <menu>
+            <group>
+                <item
+                    android:id="@+id/about"
+                    android:icon="@drawable/baseline_account_circle_24"
+                    android:title="About US" />
+                <item
+                    android:id="@+id/login"
+                    android:icon="@drawable/baseline_logout_24"
+                    android:title="Log Out" />
+            </group>
+        </menu>
+
+    </item>
+
+    <item android:title="Communication">
+        <menu>
+            <group>
+                <item
+                    android:id="@+id/Share"
+                    android:icon="@drawable/baseline_share_24"
+                    android:title="Share" />
+                <item
+                    android:id="@+id/rate"
+                    android:icon="@drawable/baseline_sentiment_satisfied_alt_24"
+                    android:title="Rate US" />
+            </group>
+        </menu>
+
+    </item>
+
+
+</menu>

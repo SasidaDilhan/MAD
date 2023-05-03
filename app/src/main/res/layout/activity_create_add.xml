@@ -1,0 +1,107 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/cre_Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Create Add"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp"
+
+            />
+
+        <TextView
+            android:id="@+id/add_jobTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Job Title:" />
+
+        <EditText
+            android:id="@+id/edt_jobTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:hint="Enter job title here"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="16dp"/>
+
+        <TextView
+            android:id="@+id/add_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Job Description:" />
+
+        <EditText
+            android:id="@+id/edt_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine"
+            android:hint="Enter job description here"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="16dp"/>
+
+        <TextView
+            android:id="@+id/add_qulification"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Qualification:" />
+
+        <EditText
+            android:id="@+id/edt_qualification"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:hint="Enter qualification here"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="16dp"/>
+
+        <TextView
+            android:id="@+id/add_expe"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Experience:" />
+
+        <EditText
+            android:id="@+id/edt_expe"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:hint="Enter experience here"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="16dp"/>
+
+        <TextView
+            android:id="@+id/add_cv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Upload CV:" />
+
+        <Button
+            android:id="@+id/btn_cv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Choose File"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="16dp"/>
+
+        <Button
+            android:id="@+id/btn_create_ad"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Create Ad"
+            android:background="@drawable/button_preset"
+            android:layout_marginTop="16dp"
+            />
+
+    </LinearLayout>
+</ScrollView>
