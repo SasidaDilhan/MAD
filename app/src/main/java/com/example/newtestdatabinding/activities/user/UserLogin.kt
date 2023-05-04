@@ -1,6 +1,5 @@
 package com.example.newtestdatabinding.activities.user
 
-import android.content.ContentValues.TAG
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -9,8 +8,7 @@ import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
 import com.example.newtestdatabinding.R
-import com.example.newtestdatabinding.activities.user.UserRegister
-import com.example.newtestdatabinding.activities.user.User_Profile
+import com.example.newtestdatabinding.activities.company.Register
 import com.google.android.material.textfield.TextInputEditText
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
@@ -30,7 +28,7 @@ class UserLogin : AppCompatActivity() {
         val userEmail = findViewById<TextInputEditText>(R.id.user_log_email)
         val userPassword = findViewById<TextInputEditText>(R.id.user_log_password)
         val loginBtn = findViewById<Button>(R.id.btn_Login)
-        val textReg = findViewById<TextView>(R.id.user_textViewLog)
+        val UtextReg = findViewById<TextView>(R.id.user_textViewLog)
 
 
         // Set click listener for the "Login" button
@@ -63,8 +61,9 @@ class UserLogin : AppCompatActivity() {
                                 val userDoc = querySnapshot.documents[0]
 
                                 // Navigate to the User_Profile activity and pass the user document ID
-                                val intent = Intent(this, User_Profile::class.java)
+                                val intent = Intent(this, MainActivity::class.java)
                                 intent.putExtra("userDocId", userDoc.id)
+                                intent.putExtra("email_user", userEmail)
                                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK)
                                 startActivity(intent)
                             } else {
@@ -88,7 +87,12 @@ class UserLogin : AppCompatActivity() {
                     Toast.makeText(this, "Login failed. Please try again", Toast.LENGTH_SHORT)
                         .show()
                 }
-
+        }
+        // Set click listener for the "Register" text
+        UtextReg.setOnClickListener {
+            // Navigate to the RegisterActivity
+            val intent = Intent(this, UserRegister::class.java)
+            startActivity(intent)
         }
     }
     companion object {

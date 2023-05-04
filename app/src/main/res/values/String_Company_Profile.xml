@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="bussiness_name">Bussiness Name</string>
+    <string name="bussiness_name"> Welcome</string>
     <string name="create_add">Create Add</string>
     <string name="view_adds">View Adds</string>
 </resources>

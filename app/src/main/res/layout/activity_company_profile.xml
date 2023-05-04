@@ -1,17 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 
-
-
-<RelativeLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
     tools:context=".activities.company.Company_Profile"
-
-    android:padding="10dp">
+    android:padding="20dp">
 
     <TextView
         android:layout_width="wrap_content"
@@ -21,44 +18,53 @@
         android:id="@+id/busi_title"
         android:textColor="@color/title"
         android:textStyle="bold"
-        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
         />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="371dp"
+        android:src="@drawable/welcome" />
 
 
     <Button
-        android:layout_width="349dp"
-        android:layout_height="155dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_below="@+id/busi_title"
         android:layout_centerHorizontal="true"
-        android:background="@drawable/big_button"
+        android:background="@drawable/button_preset"
         android:layout_marginTop="40dp"
         android:id="@+id/create"
         android:text="@string/create_add"
-        android:textSize="30sp"
+        android:textSize="20sp"
+        android:textColor="@color/white"
         />
     <Button
-        android:layout_width="349dp"
-        android:layout_height="155dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_below="@+id/create"
         android:layout_centerHorizontal="true"
-        android:background="@drawable/big_button"
+        android:background="@drawable/button_preset"
         android:layout_marginTop="30dp"
         android:id="@+id/AddView"
         android:text="@string/view_adds"
-        android:textSize="30sp"
+        android:textColor="@color/white"
+        android:textSize="20sp"
         />
-<Button
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:background="@drawable/button_preset"
-    android:layout_below="@id/AddView"
-    android:layout_marginTop="20dp"
-    android:text="logout"
-    android:id="@+id/btnLogout"
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_preset"
+        android:layout_below="@id/AddView"
+        android:layout_marginTop="20dp"
+        android:text="logout"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        android:id="@+id/btnLogout"
     />
 
 
 
 
 
-</RelativeLayout>
+</LinearLayout>

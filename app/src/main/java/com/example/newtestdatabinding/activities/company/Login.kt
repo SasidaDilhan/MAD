@@ -8,8 +8,6 @@ import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
 import com.example.newtestdatabinding.R
-import com.example.newtestdatabinding.activities.user.UserRegister
-import com.example.newtestdatabinding.activities.user.User_Profile
 import com.google.android.material.textfield.TextInputEditText
 import com.google.firebase.auth.FirebaseAuth
 
@@ -61,7 +59,7 @@ class Login : AppCompatActivity() {
         // Set click listener for the "Register" text
         textReg.setOnClickListener {
             // Navigate to the RegisterActivity
-            val intent = Intent(this, UserRegister::class.java)
+            val intent = Intent(this, Register::class.java)
             startActivity(intent)
         }
     }

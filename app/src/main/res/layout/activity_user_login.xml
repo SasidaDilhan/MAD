@@ -9,7 +9,7 @@
     android:gravity="center"
     android:padding="15dp"
     tools:context=".activities.user.UserLogin"
-    android:background="@color/secondry">
+    >
 
 
     <TextView

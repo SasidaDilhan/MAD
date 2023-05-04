@@ -8,7 +8,7 @@
         android:radius="50dp"
         />
     <solid
-        android:color="@color/button_clr"
+        android:color="@color/newcolor"
         />
 
 
