@@ -8,14 +8,14 @@
     android:orientation="vertical"
     android:gravity="center"
     android:padding="15dp"
-    tools:context=".activities.company.Login"
+    tools:context=".activities.user.UserLogin"
     android:background="@color/secondry">
 
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/login"
+        android:text="User Login"
         android:textSize="50sp"
         android:layout_marginBottom="20dp"
         />
@@ -29,8 +29,8 @@
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/log_email"
-            android:hint="@string/email"
+            android:id="@+id/user_log_email"
+            android:hint="E-mail"
             />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -44,7 +44,7 @@
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/log_password"
+            android:id="@+id/user_log_password"
             android:hint="@string/password"
             android:inputType="textPassword"
             />
@@ -62,7 +62,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/textViewLog"
+        android:id="@+id/user_textViewLog"
         android:text="@string/regi_text"
         android:layout_marginTop="50px"
 

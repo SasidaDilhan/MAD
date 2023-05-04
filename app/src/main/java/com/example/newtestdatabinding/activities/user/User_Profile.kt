@@ -1,12 +1,12 @@
-package com.example.newtestdatabinding.activities
+package com.example.newtestdatabinding.activities.user
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.newtestdatabinding.R
 
-class Contact_Us : AppCompatActivity() {
+class User_Profile : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_contact_us)
+        setContentView(R.layout.activity_user_profile)
     }
 }

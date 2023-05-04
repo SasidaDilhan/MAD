@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="15dp"
+    >
+
+    <TextView
+        android:id="@+id/title_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Job Title"
+        android:textSize="24sp"
+        />
+
+    <EditText
+        android:id="@+id/title_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title_text_view"
+        android:layout_marginTop="8dp"
+        android:inputType="text"
+        android:text=""/>
+
+    <TextView
+        android:id="@+id/description_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title_edit_text"
+        android:text="Job Description"
+        android:textSize="24sp"
+        />
+
+    <EditText
+        android:id="@+id/description_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/description_text_view"
+        android:layout_marginTop="8dp"
+        android:inputType="textMultiLine"
+        android:lines="5"
+        android:text=""/>
+
+
+    <TextView
+        android:id="@+id/qualification_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/description_edit_text"
+        android:text="Job Qualification"
+        android:textSize="24sp"
+        />
+
+    <EditText
+        android:id="@+id/qualification_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/qualification_text_view"
+        android:layout_marginTop="8dp"
+        android:inputType="textPersonName"
+        android:lines="5"
+        android:text=""/>
+
+    <TextView
+        android:id="@+id/experience_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/qualification_edit_text"
+        android:text="Experience (Years)"
+        android:textSize="24sp"
+        />
+
+    <EditText
+        android:id="@+id/experience_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/experience_text_view"
+        android:layout_marginTop="8dp"
+        android:inputType="textPersonName"
+        android:lines="5"
+        android:text=""/>
+
+
+
+    <Button
+        android:id="@+id/save_button"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/experience_edit_text"
+        android:layout_marginTop="20dp"
+        android:text="Save"
+        android:layout_centerHorizontal="true"/>
+
+</RelativeLayout>

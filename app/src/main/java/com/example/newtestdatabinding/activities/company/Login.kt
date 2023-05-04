@@ -1,4 +1,4 @@
-package com.example.newtestdatabinding.activities
+package com.example.newtestdatabinding.activities.company
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -8,7 +8,8 @@ import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
 import com.example.newtestdatabinding.R
-import com.example.newtestdatabinding.databinding.ActivityLoginBinding
+import com.example.newtestdatabinding.activities.user.UserRegister
+import com.example.newtestdatabinding.activities.user.User_Profile
 import com.google.android.material.textfield.TextInputEditText
 import com.google.firebase.auth.FirebaseAuth
 
@@ -47,6 +48,7 @@ class Login : AppCompatActivity() {
                 .addOnSuccessListener {
                     // Navigate to the MainActivity and clear the backstack
                     val intent = Intent(this, Company_Profile::class.java)
+                    intent.putExtra("email_user", email)
                     intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK)
                     startActivity(intent)
                 }
@@ -59,7 +61,7 @@ class Login : AppCompatActivity() {
         // Set click listener for the "Register" text
         textReg.setOnClickListener {
             // Navigate to the RegisterActivity
-            val intent = Intent(this, Register::class.java)
+            val intent = Intent(this, UserRegister::class.java)
             startActivity(intent)
         }
     }

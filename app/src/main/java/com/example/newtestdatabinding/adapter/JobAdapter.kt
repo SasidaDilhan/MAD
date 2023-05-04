@@ -3,15 +3,21 @@ package com.example.newtestdatabinding.adapter
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.newtestdatabinding.R
 import com.example.newtestdatabinding.model.Job
 
 
-class JobAdapter : RecyclerView.Adapter<JobAdapter.JobViewHolder>() {
+class JobAdapter(private val listener: OnJobClickListener) : RecyclerView.Adapter<JobAdapter.JobViewHolder>() {
 
     private var jobList = emptyList<Job>()
+
+    interface OnJobClickListener {
+        fun onEditClick(job: Job)
+        fun onDeleteClick(job: Job)
+    }
 
     fun setJobs(jobs: MutableList<com.example.newtestdatabinding.model.Job>) {
         jobList = jobs
@@ -28,7 +34,16 @@ class JobAdapter : RecyclerView.Adapter<JobAdapter.JobViewHolder>() {
         holder.txtJobTitle.text = currentJob.jobTitle
         holder.txtDescription.text = currentJob.description
         holder.txtQualification.text = currentJob.qualification
-        holder.txtExperience.text = currentJob.experience.toString()
+        holder.txtExperience.text = currentJob.experience
+
+        holder.btnEditAdd.setOnClickListener {
+            listener.onEditClick(currentJob)
+        }
+        holder.deletebtn.setOnClickListener{
+            listener.onDeleteClick(currentJob)
+        }
+
+
     }
 
     override fun getItemCount(): Int {
@@ -40,5 +55,7 @@ class JobAdapter : RecyclerView.Adapter<JobAdapter.JobViewHolder>() {
         val txtDescription: TextView = itemView.findViewById(R.id.tv_description)
         val txtQualification: TextView = itemView.findViewById(R.id.tv_qualification)
         val txtExperience: TextView = itemView.findViewById(R.id.tv_experience)
+        val btnEditAdd : Button = itemView.findViewById(R.id.btn_edit)
+        val deletebtn : Button = itemView.findViewById(R.id.btn_delete)
     }
 }

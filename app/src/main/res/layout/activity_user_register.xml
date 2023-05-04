@@ -15,12 +15,12 @@
         android:orientation="vertical"
         android:gravity="center"
         android:padding="15dp"
-        tools:context=".activities.company.Register">
+        tools:context=".activities.user.UserRegister">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/register"
+            android:text="User Register"
             android:textSize="50sp"
             android:textColor="@color/black"
             android:layout_marginBottom="20dp"
@@ -35,9 +35,9 @@
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/reg_Cname"
-                android:hint="Company Name"
+                android:layout_height="60dp"
+                android:id="@+id/user_name"
+                android:hint="Full Name"
                 android:inputType="textPersonName"
                 />
         </com.google.android.material.textfield.TextInputLayout>
@@ -52,9 +52,9 @@
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/reg_email"
-                android:hint="@string/email"
+                android:layout_height="60dp"
+                android:id="@+id/user_email"
+                android:hint="E-Mail"
                 android:inputType="textEmailAddress"
                 />
         </com.google.android.material.textfield.TextInputLayout>
@@ -67,8 +67,8 @@
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/reg_phone"
+                android:layout_height="60dp"
+                android:id="@+id/user_phone"
                 android:hint="Phone Number"
                 android:inputType="number"
                 />
@@ -83,28 +83,13 @@
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/reg_address"
+                android:layout_height="60dp"
+                android:id="@+id/user_address"
                 android:hint="Address"
                 android:inputType="textPostalAddress"
                 />
         </com.google.android.material.textfield.TextInputLayout>
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-
-            >
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/reg_regnumber"
-                android:hint="Registraion Number"
-                android:inputType="textPostalAddress"
-                />
-        </com.google.android.material.textfield.TextInputLayout>
 
 
 
@@ -117,8 +102,8 @@
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/reg_password"
+                android:layout_height="60dp"
+                android:id="@+id/user_password"
                 android:hint="@string/password"
                 android:inputType="textPassword"
                 />
@@ -134,8 +119,8 @@
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/reg_confirmPass"
+                android:layout_height="60dp"
+                android:id="@+id/user_confirmPass"
                 android:hint="@string/re_enter_password"
                 android:inputType="textPassword"
                 />
@@ -146,10 +131,11 @@
 
         <Button
             android:id="@+id/btn_Register"
-            android:layout_width="wrap_content"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:text="@string/register"
+            android:text="Register"
+            android:textSize="20sp"
             />
         <TextView
             android:layout_width="wrap_content"

@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activities.About_Us"
+    tools:context=".activities.company.About_Us"
     android:padding="10dp">
 
     <TextView

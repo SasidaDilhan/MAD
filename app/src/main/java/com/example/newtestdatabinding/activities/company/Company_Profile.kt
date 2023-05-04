@@ -1,4 +1,4 @@
-package com.example.newtestdatabinding.activities
+package com.example.newtestdatabinding.activities.company
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -22,7 +22,7 @@ class Company_Profile : AppCompatActivity() {
         val createAdd_btn = findViewById<Button>(R.id.create)
         val viewAdd_btn = findViewById<Button>(R.id.AddView)
 
-
+     val currentUser = intent.getStringExtra("email_user")
         //Intialize firebase and fireStore
         auth = FirebaseAuth.getInstance()
         db = FirebaseFirestore.getInstance()
@@ -40,11 +40,13 @@ class Company_Profile : AppCompatActivity() {
 
         createAdd_btn.setOnClickListener{
             val intent = Intent(this, CreateAdd::class.java)
+            intent.putExtra("email_user", currentUser)
             startActivity(intent)
         }
 
         viewAdd_btn.setOnClickListener{
             val intent = Intent(this, AdListActivity::class.java)
+            intent.putExtra("email_user", currentUser)
             startActivity(intent)
         }
 

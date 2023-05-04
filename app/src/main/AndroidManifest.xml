@@ -14,7 +14,22 @@
         android:theme="@style/Theme.Material3.Light.NoActionBar"
         tools:targetApi="31">
         <activity
-            android:name=".activities.Display_adds_company"
+            android:name=".activities.user.User_Profile"
+            android:exported="false" />
+        <activity
+            android:name=".activities.user.UserRegister"
+            android:exported="false" />
+        <activity
+            android:name=".activities.user.UserLogin"
+            android:exported="true" >
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activities.company.EditJobActivity"
             android:exported="false" />
 
         <uses-library
@@ -22,42 +37,38 @@
             android:required="false" />
 
         <activity
-            android:name=".activities.CreateAdd"
-            android:exported="false"></activity>
-        <activity
-            android:name=".activities.MyAccount"
+            android:name=".activities.company.CreateAdd"
             android:exported="false" />
         <activity
-            android:name=".activities.Company_Profile"
+            android:name=".activities.company.MyAccount"
             android:exported="false" />
         <activity
-            android:name=".activities.Contact_Us"
+            android:name=".activities.company.Company_Profile"
             android:exported="false" />
         <activity
-            android:name=".activities.About_Us"
+            android:name=".activities.company.Contact_Us"
             android:exported="false" />
         <activity
-            android:name=".activities.AdListActivity"
+            android:name=".activities.company.About_Us"
             android:exported="false" />
         <activity
-            android:name=".activities.Register"
+            android:name=".activities.company.AdListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.company.Register"
             android:exported="false"
-            android:theme="@style/Theme.Material3.Light.NoActionBar"></activity>
+            android:theme="@style/Theme.Material3.Light.NoActionBar" />
         <activity
-            android:name=".activities.Login"
-            android:exported="true"
+            android:name=".activities.company.Login"
+            android:exported="false"
             android:theme="@style/Theme.Material3.Light.NoActionBar">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
-            android:name=".activities.SecondActivity"
+            android:name=".activities.company.SecondActivity"
             android:exported="false" />
         <activity
-            android:name=".activities.MainActivity"
+            android:name=".activities.company.MainActivity"
             android:exported="false" />
     </application>
 

@@ -1,4 +1,4 @@
-package com.example.newtestdatabinding.activities
+package com.example.newtestdatabinding.activities.company
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -8,7 +8,6 @@ import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
 import com.example.newtestdatabinding.R
-import com.example.newtestdatabinding.databinding.ActivityRegisterBinding
 import com.google.android.material.textfield.TextInputEditText
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore

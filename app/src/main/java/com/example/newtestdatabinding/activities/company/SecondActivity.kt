@@ -1,4 +1,4 @@
-package com.example.newtestdatabinding.activities
+package com.example.newtestdatabinding.activities.company
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
