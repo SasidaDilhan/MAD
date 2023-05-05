@@ -57,6 +57,19 @@
             android:textColor="@color/white"
             android:textSize="20sp"
             />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/AddView"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/button_preset"
+            android:layout_marginTop="30dp"
+            android:id="@+id/Com_Profile"
+            android:text="Profile"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            />
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

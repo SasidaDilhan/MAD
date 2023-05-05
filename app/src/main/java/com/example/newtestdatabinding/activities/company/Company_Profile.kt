@@ -21,6 +21,7 @@ class Company_Profile : AppCompatActivity() {
         val logoutBtn = findViewById<Button>(R.id.btnLogout)
         val createAdd_btn = findViewById<Button>(R.id.create)
         val viewAdd_btn = findViewById<Button>(R.id.AddView)
+        val profileView = findViewById<Button>(R.id.Com_Profile)
 
      val currentUser = intent.getStringExtra("email_user")
         //Intialize firebase and fireStore
@@ -47,6 +48,11 @@ class Company_Profile : AppCompatActivity() {
         viewAdd_btn.setOnClickListener{
             val intent = Intent(this, AdListActivity::class.java)
             intent.putExtra("email_user", currentUser)
+            startActivity(intent)
+        }
+
+        profileView.setOnClickListener {
+            val intent = Intent(this, CompanyProfileDisplay::class.java)
             startActivity(intent)
         }
 
