@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+
+    tools:context=".activities.user.ProfileDisplay"
+    android:padding="20dp"
+    >
+    <TextView
+        android:id="@+id/welcomettl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="Welcome"
+        android:textColor="@color/black"
+        android:textSize="40sp"
+        />
+
+
+    <TextView
+        android:id="@+id/d_vdtname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Full Name :"
+        />
+    <TextView
+        android:id="@+id/d_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        />
+
+    <TextView
+        android:id="@+id/d_vdtemail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="E-Mail: "
+        />
+    <TextView
+        android:id="@+id/d_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+         />
+
+    <TextView
+        android:id="@+id/d_vdtphone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Phone Number : "
+        />
+
+    <TextView
+        android:id="@+id/d_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        />
+
+
+    <TextView
+        android:id="@+id/d_vdtaddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Address"
+        />
+    <TextView
+        android:id="@+id/d_address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+         />
+
+<!--    <TextView-->
+<!--        android:id="@+id/d_vdpassword"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Password"-->
+<!--        app:passwordToggleEnabled="true"-->
+<!--        />-->
+<!--    <TextView-->
+<!--        android:id="@+id/d_password"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+
+<!--        />-->
+
+    <Button
+        android:id="@+id/edt_profile"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_preset"
+        android:layout_gravity="center"
+        android:text="Edit Profile"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        />
+    <Button
+        android:id="@+id/dlt_profile"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_cancel"
+        android:layout_gravity="center"
+        android:text="Delete Profile"
+        android:textColor="@color/white"
+        android:layout_marginTop="20dp"
+        android:textSize="15sp"
+        />
+
+
+
+
+
+
+</LinearLayout>

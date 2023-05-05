@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+
+    tools:context=".activities.user.ProfileDisplay"
+    android:padding="20dp"
+    >
+    <TextView
+        android:id="@+id/welcomettledt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="Edit Profile"
+        android:textColor="@color/black"
+        android:textSize="40sp"
+        />
+
+
+    <TextView
+        android:id="@+id/d_edtname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Full Name :"
+        />
+    <EditText
+        android:id="@+id/ed_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        />
+
+    <TextView
+        android:id="@+id/d_edtemail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="E-Mail: "
+        />
+    <EditText
+        android:id="@+id/ed_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+
+    <TextView
+        android:id="@+id/d_edtphone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Phone Number : "
+        />
+
+    <EditText
+        android:id="@+id/ed_phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        />
+
+
+    <TextView
+        android:id="@+id/d_edtaddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Address"
+        />
+    <EditText
+        android:id="@+id/ed_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        />
+    <TextView
+        android:id="@+id/d_edpassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Password "
+        />
+    <EditText
+        android:id="@+id/ed_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:passwordToggleEnabled="true"
+        />
+
+    <Button
+        android:id="@+id/edt_profile"
+        android:layout_width="200dp"
+        android:layout_marginTop="40dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_preset"
+        android:layout_gravity="center"
+        android:text="Save"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        />
+    <Button
+        android:id="@+id/cnsl_profile"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_cancel"
+        android:layout_gravity="center"
+        android:text="Cancel"
+        android:textColor="@color/white"
+        android:layout_marginTop="20dp"
+        android:textSize="15sp"
+        />
+
+
+
+
+
+
+</LinearLayout>

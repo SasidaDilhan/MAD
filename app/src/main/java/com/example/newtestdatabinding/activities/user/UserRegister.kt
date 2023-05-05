@@ -65,7 +65,8 @@ class UserRegister : AppCompatActivity() {
                         "userName" to UserName,
                         "email" to email,
                         "phoneNumber" to phoneNumber,
-                        "address" to address
+                        "address" to address,
+                        "password" to password
                     )
                     // Add the user to Firestore
                     db.collection("App_users")
