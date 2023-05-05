@@ -44,14 +44,14 @@ class UserRegister : AppCompatActivity() {
         // Set click listener for the "Register" button
         registerBtn.setOnClickListener {
             // Get the input values from the EditTexts
-            val companyName = userName.text.toString()
+            val UserName = userName.text.toString()
             val email = userEmail.text.toString()
             val phoneNumber = userPhoneNumber.text.toString()
             val address = userAddress.text.toString()
             val password = userPassword.text.toString()
 
             // Validate the input values
-            if (companyName.isBlank() || email.isBlank() || phoneNumber.isBlank() ||
+            if (UserName.isBlank() || email.isBlank() || phoneNumber.isBlank() ||
                 address.isBlank() ||  password.isBlank()) {
                 Toast.makeText(this, "Please fill in all the fields", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
@@ -62,7 +62,7 @@ class UserRegister : AppCompatActivity() {
                 .addOnSuccessListener { authResult ->
                     // Create a User object to store in Firestore
                     val user = hashMapOf(
-                        "companyName" to companyName,
+                        "userName" to UserName,
                         "email" to email,
                         "phoneNumber" to phoneNumber,
                         "address" to address

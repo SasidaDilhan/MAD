@@ -8,6 +8,7 @@
     android:orientation="vertical"
     android:gravity="center"
     android:padding="15dp"
+    android:background="@color/secondry"
     tools:context=".activities.user.UserLogin"
     >
 
@@ -16,8 +17,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="User Login"
-        android:textSize="50sp"
+        android:textSize="40sp"
         android:layout_marginBottom="20dp"
+        android:textColor="@color/newcolor"
+        android:textStyle="bold"
         />
 
     <com.google.android.material.textfield.TextInputLayout
@@ -28,9 +31,10 @@
         >
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
             android:id="@+id/user_log_email"
             android:hint="E-mail"
+            android:background="@color/secondry"
             />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -43,10 +47,11 @@
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
             android:id="@+id/user_log_password"
             android:hint="@string/password"
             android:inputType="textPassword"
+            android:background="@color/secondry"
             />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -54,9 +59,11 @@
         android:id="@+id/btn_Login"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:text="@string/login"
+        android:text="User Login"
+        android:textColor="@color/white"
+        android:textSize="15sp"
         android:background="@drawable/button_preset"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="50dp"
         />
 
     <TextView

@@ -29,9 +29,7 @@
         android:textAlignment="center"
         android:lineSpacingExtra="2dp"
         android:textColor="@color/black"
+        android:inputType="textMultiLine"
         android:textSize="20sp" />
-
-
-
 
 </RelativeLayout>

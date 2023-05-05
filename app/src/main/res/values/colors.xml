@@ -16,7 +16,13 @@
     <color name="gradient_e">#00B8BA</color>
     <color name="background_clr">#006064</color>
     <color name="secondry">#F4FBFB</color>
-    <color name="newcolor">#DE87D8</color>
+    <color name="newcolor">#9C67D5</color>
+    <color name="newcolorback">#FBF4FA</color>
+    <color name="cancel">#f94449</color>
+    <color name="User">#2BC48A</color>
+    <color name="mainLogin">#7DDDE9</color>
+
+
 
 
 </resources>

@@ -8,8 +8,9 @@
         android:radius="50dp"
         />
     <solid
-        android:color="@color/mainLogin"
+        android:color="@color/cancel"
         />
+
 
 
 </shape>

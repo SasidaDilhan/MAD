@@ -16,7 +16,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/login"
-        android:textSize="50sp"
+        android:textSize="40sp"
+        android:textColor="@color/newcolor"
+        android:textStyle="bold"
         android:layout_marginBottom="20dp"
         />
 
@@ -28,9 +30,10 @@
         >
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
             android:id="@+id/log_email"
             android:hint="@string/email"
+            android:background="@color/secondry"
             />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -43,10 +46,11 @@
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
             android:id="@+id/log_password"
             android:hint="@string/password"
             android:inputType="textPassword"
+            android:background="@color/secondry"
             />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -56,7 +60,7 @@
         android:layout_height="wrap_content"
         android:text="@string/login"
         android:background="@drawable/button_preset"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="50dp"
         />
 
     <TextView
@@ -65,7 +69,6 @@
         android:id="@+id/textViewLog"
         android:text="@string/regi_text"
         android:layout_marginTop="50px"
-
         />
 
 

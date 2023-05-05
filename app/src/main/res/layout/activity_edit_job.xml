@@ -7,11 +7,26 @@
     >
 
     <TextView
+        android:id="@+id/edt_job_ttl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:layout_marginBottom="30dp"
+        android:text="Edit Job Details"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/newcolor"
+        android:textStyle="bold"
+        />
+
+    <TextView
         android:id="@+id/title_text_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Job Title"
-        android:textSize="24sp"
+        android:layout_below="@id/edt_job_ttl"
+        android:layout_marginTop="30dp"
+        android:textColor="@color/black"
+        android:text="Job Title :"
+        android:textSize="20sp"
         />
 
     <EditText
@@ -28,8 +43,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/title_edit_text"
-        android:text="Job Description"
-        android:textSize="24sp"
+        android:text="Job Description :"
+        android:textSize="20sp"
+        android:textColor="@color/black"
         />
 
     <EditText
@@ -39,7 +55,7 @@
         android:layout_below="@id/description_text_view"
         android:layout_marginTop="8dp"
         android:inputType="textMultiLine"
-        android:lines="5"
+        android:lines="2"
         android:text=""/>
 
 
@@ -48,8 +64,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/description_edit_text"
-        android:text="Job Qualification"
-        android:textSize="24sp"
+        android:text="Job Qualification :"
+        android:textColor="@color/black"
+        android:textSize="20sp"
         />
 
     <EditText
@@ -67,8 +84,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/qualification_edit_text"
-        android:text="Experience (Years)"
-        android:textSize="24sp"
+        android:text="Experience (Years) :"
+        android:textColor="@color/black"
+        android:layout_marginTop="10dp"
+        android:textSize="20sp"
         />
 
     <EditText
@@ -76,7 +95,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/experience_text_view"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="10dp"
         android:inputType="textPersonName"
         android:lines="5"
         android:text=""/>
@@ -85,11 +104,26 @@
 
     <Button
         android:id="@+id/save_button"
-        android:layout_width="200dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/experience_edit_text"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="50dp"
         android:text="Save"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        android:background="@drawable/button_preset"
+        android:layout_centerHorizontal="true"/>
+
+    <Button
+        android:id="@+id/cancel_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/save_button"
+        android:layout_marginTop="20dp"
+        android:text="Cancel"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        android:background="@drawable/button_cancel"
         android:layout_centerHorizontal="true"/>
 
 </RelativeLayout>

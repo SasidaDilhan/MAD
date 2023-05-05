@@ -89,10 +89,6 @@
                 android:inputType="textPostalAddress"
                 />
         </com.google.android.material.textfield.TextInputLayout>
-
-
-
-
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -125,16 +121,13 @@
                 android:inputType="textPassword"
                 />
         </com.google.android.material.textfield.TextInputLayout>
-
-
-
-
         <Button
             android:id="@+id/btn_Register"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:text="Register"
+            android:background="@drawable/button_preset"
             android:textSize="20sp"
             />
         <TextView
@@ -144,8 +137,5 @@
             android:text="@string/have_you_account_login"
             android:layout_marginTop="50px"
             />
-
     </LinearLayout>
-
-
 </ScrollView>

@@ -101,21 +101,38 @@
 
         <Button
             android:id="@+id/btn_cv"
-            android:layout_width="wrap_content"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:text="Choose File"
             android:layout_marginTop="8dp"
-            android:layout_marginBottom="16dp"/>
+            android:textColor="@color/white"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/button_preset_cv"/>
 
         <Button
             android:id="@+id/btn_apply"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Apply"
+            android:textColor="@color/white"
             android:background="@drawable/button_preset"
             android:textSize="20sp"
             android:layout_marginTop="16dp"
             />
+
+        <Button
+            android:id="@+id/btn_cancel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Cancel"
+            android:textColor="@color/white"
+            android:background="@drawable/button_cancel"
+            android:textSize="20sp"
+            android:layout_marginTop="16dp"
+
+            />
+
+
 
     </LinearLayout>
 </ScrollView>

@@ -21,8 +21,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/register"
-            android:textSize="50sp"
-            android:textColor="@color/black"
+            android:textSize="30sp"
+            android:textColor="@color/newcolor"
             android:layout_marginBottom="20dp"
             />
 
@@ -35,8 +35,9 @@
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="50dp"
                 android:id="@+id/reg_Cname"
+                android:background="@color/white"
                 android:hint="Company Name"
                 android:inputType="textPersonName"
                 />
@@ -52,8 +53,9 @@
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="50dp"
                 android:id="@+id/reg_email"
+                android:background="@color/white"
                 android:hint="@string/email"
                 android:inputType="textEmailAddress"
                 />
@@ -67,9 +69,10 @@
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="50dp"
                 android:id="@+id/reg_phone"
                 android:hint="Phone Number"
+                android:background="@color/white"
                 android:inputType="number"
                 />
         </com.google.android.material.textfield.TextInputLayout>
@@ -83,9 +86,10 @@
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="50dp"
                 android:id="@+id/reg_address"
                 android:hint="Address"
+                android:background="@color/white"
                 android:inputType="textPostalAddress"
                 />
         </com.google.android.material.textfield.TextInputLayout>
@@ -99,10 +103,11 @@
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="50dp"
                 android:id="@+id/reg_regnumber"
                 android:hint="Registraion Number"
                 android:inputType="textPostalAddress"
+                android:background="@color/white"
                 />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -121,6 +126,7 @@
                 android:id="@+id/reg_password"
                 android:hint="@string/password"
                 android:inputType="textPassword"
+                android:background="@color/white"
                 />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -138,6 +144,7 @@
                 android:id="@+id/reg_confirmPass"
                 android:hint="@string/re_enter_password"
                 android:inputType="textPassword"
+                android:background="@color/white"
                 />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -146,10 +153,13 @@
 
         <Button
             android:id="@+id/btn_Register"
-            android:layout_width="wrap_content"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="50dp"
             android:text="@string/register"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:background="@drawable/button_preset"
             />
         <TextView
             android:layout_width="wrap_content"

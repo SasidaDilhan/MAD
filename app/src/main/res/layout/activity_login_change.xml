@@ -9,11 +9,16 @@
     android:layout_gravity="center"
     android:padding="20dp"
     tools:context=".activities.user.Login_Change">
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/loginchange"
 
+        />
     <Button
         android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:background="@drawable/button_preset"
+        android:background="@drawable/button_preset2"
         android:text="USER"
         android:textSize="20sp"
         android:id="@+id/user_login"
@@ -25,21 +30,10 @@
     <Button
         android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:background="@drawable/button_preset"
+        android:background="@drawable/button_preset2"
         android:text="COMPANY"
         android:textSize="20sp"
         android:id="@+id/company_login"
-        android:textColor="@color/white"
-        android:layout_gravity="center"
-        android:layout_marginTop="30dp"
-        />
-    <Button
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:background="@drawable/button_preset"
-        android:text="COMPANY"
-        android:textSize="20sp"
-        android:id="@+id/jobView"
         android:textColor="@color/white"
         android:layout_gravity="center"
         android:layout_marginTop="30dp"
