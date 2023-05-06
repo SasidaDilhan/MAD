@@ -58,7 +58,7 @@ class EditJobActivity : AppCompatActivity() {
         if (jobId.isNotEmpty()) {
             // Update the existing job post
             db.collection("adds").document(jobId)
-                .update("title", jobTitle, "description", jobDescription, "qulification", qualification, "experience", experience)
+                .update("jobTitle", jobTitle, "description", jobDescription, "qualification", qualification, "experience", experience)
                 .addOnSuccessListener {
                     Toast.makeText(this, "Job post updated successfully!", Toast.LENGTH_SHORT).show()
                     finish()

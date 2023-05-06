@@ -38,6 +38,7 @@
                 android:layout_height="60dp"
                 android:id="@+id/user_name"
                 android:hint="Full Name"
+                android:background="@color/white"
                 android:inputType="textPersonName"
                 />
         </com.google.android.material.textfield.TextInputLayout>
@@ -55,6 +56,7 @@
                 android:layout_height="60dp"
                 android:id="@+id/user_email"
                 android:hint="E-Mail"
+                android:background="@color/white"
                 android:inputType="textEmailAddress"
                 />
         </com.google.android.material.textfield.TextInputLayout>
@@ -70,6 +72,7 @@
                 android:layout_height="60dp"
                 android:id="@+id/user_phone"
                 android:hint="Phone Number"
+                android:background="@color/white"
                 android:inputType="number"
                 />
         </com.google.android.material.textfield.TextInputLayout>
@@ -87,6 +90,7 @@
                 android:id="@+id/user_address"
                 android:hint="Address"
                 android:inputType="textPostalAddress"
+                android:background="@color/white"
                 />
         </com.google.android.material.textfield.TextInputLayout>
         <com.google.android.material.textfield.TextInputLayout
@@ -100,6 +104,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:id="@+id/user_password"
+                android:background="@color/white"
                 android:hint="@string/password"
                 android:inputType="textPassword"
                 />
@@ -117,6 +122,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:id="@+id/user_confirmPass"
+                android:background="@color/white"
                 android:hint="@string/re_enter_password"
                 android:inputType="textPassword"
                 />
@@ -127,6 +133,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:text="Register"
+            android:textColor="@color/white"
             android:background="@drawable/button_preset"
             android:textSize="20sp"
             />

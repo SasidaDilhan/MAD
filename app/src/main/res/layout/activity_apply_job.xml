@@ -10,7 +10,7 @@
         android:padding="16dp">
 
         <TextView
-            android:id="@+id/apply_Title"
+            android:id="@+id/apply_textTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Apply Job"
@@ -23,37 +23,48 @@
             />
 
         <TextView
-            android:id="@+id/apply_name"
+            android:id="@+id/apply_joTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:textSize="20sp"
             android:textColor="@color/black"
-            android:text="Full Name :" />
+            android:text="Job Title :" />
 
-        <EditText
-            android:id="@+id/apply_Ename"
+        <TextView
+            android:id="@+id/apply_Title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="text"
-            android:hint="Saman Amarkoon"
             android:layout_marginTop="8dp"
             android:layout_marginBottom="16dp"/>
 
         <TextView
-            android:id="@+id/apply_phone"
+            android:id="@+id/apply_exp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/black"
             android:textSize="20sp"
-            android:text="Phone Number :" />
+            android:text="Experience :" />
 
-        <EditText
-            android:id="@+id/apply_Ephone"
+        <TextView
+            android:id="@+id/apply_jobExperience"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="phone"
-            android:hint="Enter job description here"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="16dp"/>
+        <TextView
+            android:id="@+id/apply_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:text="Description :" />
+
+        <TextView
+            android:id="@+id/apply_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:layout_marginBottom="16dp"/>
 
@@ -65,31 +76,31 @@
             android:textSize="20sp"
             android:text="E-Mail :" />
 
-        <EditText
+        <TextView
             android:id="@+id/apply_e_mail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="text"
-            android:hint="samanamarakoon@gmail.com"
             android:layout_marginTop="8dp"
             android:layout_marginBottom="16dp"/>
 
         <TextView
-            android:id="@+id/apply_age"
+            android:id="@+id/apply_quali"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColor="@color/black"
             android:textSize="20sp"
-            android:text="Age :" />
+            android:text="Qualification :" />
 
-        <EditText
-            android:id="@+id/apply_Eage"
+        <TextView
+            android:id="@+id/apply_qualification"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="number"
-            android:hint="Years"
+            android:inputType="text"
             android:layout_marginTop="8dp"
             android:layout_marginBottom="16dp"/>
+
+
 
         <TextView
             android:id="@+id/apply_cv"
@@ -98,6 +109,15 @@
             android:textColor="@color/black"
             android:textSize="20sp"
             android:text="Upload CV:" />
+        <Button
+            android:id="@+id/btn_choose"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="Choose File"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/white"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/button_preset_cv"/>
 
 
 

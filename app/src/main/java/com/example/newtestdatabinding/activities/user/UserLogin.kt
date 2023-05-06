@@ -61,7 +61,7 @@ class UserLogin : AppCompatActivity() {
                                 val userDoc = querySnapshot.documents[0]
 
                                 // Navigate to the User_Profile activity and pass the user document ID
-                                val intent = Intent(this, ProfileDisplay::class.java)
+                                val intent = Intent(this, AddViewUser::class.java)
                                 intent.putExtra("userDocId", userDoc.id)
                                 intent.putExtra("email_user", userEmail)
                                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK)
