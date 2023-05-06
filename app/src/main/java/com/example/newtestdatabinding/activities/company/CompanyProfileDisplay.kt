@@ -36,7 +36,7 @@ class CompanyProfileDisplay : AppCompatActivity() {
         disp_cname = findViewById(R.id.cmp_name)
         disp_cemail = findViewById(R.id.cmp_email)
         disp_cphone = findViewById(R.id.cmp_phone)
-        disp_caddress = findViewById(R.id.cmp_email)
+        disp_caddress = findViewById(R.id.cmp_address)
         disp_cregis = findViewById(R.id.cmp_regiseterNum)
         deletecProfile = findViewById(R.id.dlt_Cprofile)
 
@@ -44,17 +44,17 @@ class CompanyProfileDisplay : AppCompatActivity() {
         val ref = db.collection("users").document(usrId)
         ref.get().addOnSuccessListener {
             if(it != null){
-                val name = it.get("companyName").toString()
-                val email = it.get("email").toString()
-                val phoneNumber = it.get("phoneNumber").toString()
-                val address = it.get("address").toString()
-                val registNum = it.get("registrationNumber").toString()
+                val cname = it.get("companyName").toString()
+                val cemail = it.get("email").toString()
+                val cphoneNumber = it.get("phoneNumber").toString()
+                val caddress = it.get("address").toString()
+                val cregistNum = it.get("registrationNumber").toString()
 
-                disp_cname.text = name
-                disp_cemail.text = email
-                disp_cphone.text = phoneNumber
-                disp_caddress.text = address
-                disp_cregis.text = registNum
+                disp_cname.text = cname
+                disp_cemail.text = cemail
+                disp_cphone.text = cphoneNumber
+                disp_caddress.text = caddress
+                disp_cregis.text = cregistNum
 
             }
         }

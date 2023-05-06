@@ -71,6 +71,7 @@ class ProfileDisplay : AppCompatActivity() {
 
             val intent = Intent(this, UserLogin::class.java)
                startActivity(intent)
+
             val usrId = FirebaseAuth.getInstance().currentUser!!.uid
             db.collection("App_users").document(usrId).delete()
                 .addOnSuccessListener {
