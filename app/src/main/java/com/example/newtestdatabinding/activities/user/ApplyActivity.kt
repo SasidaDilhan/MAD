@@ -53,52 +53,75 @@ class ApplyActivity : AppCompatActivity() {
         storage = FirebaseStorage.getInstance()
 
         val jobId = intent.getStringExtra("jobPostId")
+        jobTitle.text = intent.getStringExtra("jobTitle")
+        jobDescription.text = intent.getStringExtra("description")
+        jobExperience.text = intent.getStringExtra("experience")
+        jobqualification.text = intent.getStringExtra("qualification")
 
-        if (jobId != null) {
-            db.collection("adds").document(jobId).get().addOnSuccessListener { jobDoc ->
-                if (jobDoc.exists()) {
-                    val job = jobDoc.toObject(Job::class.java)
 
-                    jobTitle.text = job?.jobTitle
-                    jobDescription.text = job?.description
-                    jobExperience.text = job?.experience
-                    jobqualification.text = job?.qualification
-
-                    applyButton.setOnClickListener {
-                        uploadCV(jobId)
-                    }
-                }
-            }
-        }
 
         chooseFileButton.setOnClickListener {
             val intent = Intent(Intent.ACTION_GET_CONTENT)
             intent.type = "application/pdf"
             startActivityForResult(intent, 101)
         }
+        applyButton.setOnClickListener {
+            saveDetails()
+        }
     }
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
 
-    private fun uploadCV(jobId: String) {
-        val cvRef = storage.reference.child("cv/${auth.currentUser?.uid}_${jobId}")
+        if (requestCode == 101 && resultCode == Activity.RESULT_OK && data != null) {
+            cvUri = data.data!!
+            Toast.makeText(this, "File selected", Toast.LENGTH_SHORT).show()
+        }
+    }
+    private fun saveDetails() {
+        val cvRef = storage.reference.child("CVs").child(auth.currentUser!!.uid)
 
         progressDialog.show()
 
-        cvRef.putFile(cvUri)
-            .continueWithTask(Continuation<UploadTask.TaskSnapshot, Task<Uri>> { task ->
-                if (!task.isSuccessful) {
-                    task.exception?.let {
-                        throw it
-                    }
-                }
-                return@Continuation cvRef.downloadUrl
-            })
-            .addOnCompleteListener { task ->
-                progressDialog.dismiss()
-                if (task.isSuccessful) {
-                    val cvUrl = task.result.toString()
-                   // saveApplication(jobId, cvUrl)
-                } else {
-                    Toast.makeText(this, "Upload failed: ${task.exception}", Toast.LENGTH_SHORT).show()
+        val uploadTask = cvRef.putFile(cvUri)
+
+        uploadTask.continueWithTask(Continuation<UploadTask.TaskSnapshot, Task<Uri>> { task ->
+            if (!task.isSuccessful) {
+                task.exception?.let {
+                    throw it
                 }
             }
-    }}
+            return@Continuation cvRef.downloadUrl
+        }).addOnCompleteListener { task ->
+            if (task.isSuccessful) {
+                val downloadUri = task.result.toString()
+
+                val jobApplication = hashMapOf(
+                 //    "jobId" to jobId,
+
+                    "userId" to auth.currentUser!!.uid,
+                    "jobTitle" to jobTitle.text.toString(),
+                    "email" to email.text.toString(),
+                    "jobExperience" to jobExperience.text.toString(),
+                    "cvUrl" to downloadUri
+                )
+
+                db.collection("JobApplications").add(jobApplication)
+                    .addOnSuccessListener {
+                        progressDialog.dismiss()
+                        Toast.makeText(this, "Job application submitted successfully", Toast.LENGTH_SHORT).show()
+                        setResult(Activity.RESULT_OK)
+                        finish()
+                    }
+                    .addOnFailureListener {
+                        progressDialog.dismiss()
+                        Toast.makeText(this, "Failed to submit job application", Toast.LENGTH_SHORT).show()
+                    }
+            } else {
+                progressDialog.dismiss()
+                Toast.makeText(this, "Failed to upload CV", Toast.LENGTH_SHORT).show()
+            }
+        }
+    }
+
+
+}

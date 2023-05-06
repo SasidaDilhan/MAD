@@ -22,6 +22,7 @@ class CompanyProfileDisplay : AppCompatActivity() {
     private lateinit var disp_cphone: TextView
     private lateinit var disp_caddress: TextView
     private lateinit var disp_cregis : TextView
+    private lateinit var editProfile:Button
     private lateinit var deletecProfile : Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -39,6 +40,7 @@ class CompanyProfileDisplay : AppCompatActivity() {
         disp_caddress = findViewById(R.id.cmp_address)
         disp_cregis = findViewById(R.id.cmp_regiseterNum)
         deletecProfile = findViewById(R.id.dlt_Cprofile)
+        editProfile = findViewById(R.id.edt_Cprofile)
 
         val usrId = FirebaseAuth.getInstance().currentUser!!.uid
         val ref = db.collection("users").document(usrId)
@@ -78,6 +80,10 @@ class CompanyProfileDisplay : AppCompatActivity() {
                 .addOnFailureListener{
                     Toast.makeText(this, "Failiure in delete",Toast.LENGTH_SHORT).show()
                 }
+        }
+        editProfile.setOnClickListener {
+            val intent = Intent(this, UpdateCompanyProfile::class.java)
+            startActivity(intent)
         }
 
     }

@@ -1,31 +1,29 @@
-package com.example.newtestdatabinding.activities.user
-
-import android.content.Intent
+package com.example.newtestdatabinding.activities.company
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
-import android.widget.ImageButton
 import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.newtestdatabinding.R
 import com.example.newtestdatabinding.model.Job
+import com.example.newtestdatabinding.model.JobApplication
 import com.google.firebase.firestore.FirebaseFirestore
 
-class AddViewUser : AppCompatActivity() {
+class ApplyUser : AppCompatActivity() {
 
     private lateinit var recyclerView: RecyclerView
     private lateinit var jobAdapter: JobAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_add_view_user)
+        setContentView(R.layout.activity_apply_user)
 
         // Initialize RecyclerView
-        recyclerView = findViewById(R.id.recyclerView)
+        recyclerView = findViewById(R.id.recyclerView2)
         recyclerView.layoutManager = LinearLayoutManager(this)
 
         // Create the job adapter and set it on the RecyclerView
@@ -41,13 +39,13 @@ class AddViewUser : AppCompatActivity() {
         val db = FirebaseFirestore.getInstance()
 
         // Query the Firestore collection for all job posts
-        db.collection("adds").get()
+        db.collection("JobApplications").get()
             .addOnSuccessListener { result ->
-                val jobList = mutableListOf<Job>()
+                val jobList = mutableListOf<JobApplication>()
 
                 // Convert each Firestore document to a JobPost object and add it to the list
                 for (document in result) {
-                    val jobPost = document.toObject(Job::class.java)
+                    val jobPost = document.toObject(JobApplication::class.java)
                     jobList.add(jobPost)
                 }
 
@@ -60,12 +58,12 @@ class AddViewUser : AppCompatActivity() {
             }
     }
 
-    inner class JobAdapter(private var jobList: List<Job>) :
+    inner class JobAdapter(private var jobList: List<JobApplication>) :
         RecyclerView.Adapter<JobAdapter.JobViewHolder>() {
 
         override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): JobViewHolder {
             val view = LayoutInflater.from(parent.context)
-                .inflate(R.layout.job_list_user, parent, false)
+                .inflate(R.layout.job_list_apply, parent, false)
             return JobViewHolder(view)
         }
 
@@ -74,36 +72,39 @@ class AddViewUser : AppCompatActivity() {
 
             // Set the job post details on the view holder's views
             holder.title.text = jobPost.jobTitle
-            holder.description.text = jobPost.description
-            holder.qualification.text = jobPost.qualification
-            holder.experience.text = jobPost.experience
+            holder.email.text = jobPost.email
+            holder.experience.text = jobPost.jobExperience
+            holder.cvUrl.text = jobPost.cvUrl
 
             // Set the onClickListener for the Apply button
-            holder.applyButton.setOnClickListener {
-                // Start the ApplyActivity with the job post ID as an intent extra
-                val intent = Intent(this@AddViewUser, ApplyActivity::class.java)
-                intent.putExtra("jobPostId", jobPost.id)
-                intent.putExtra("jobTitle", jobPost.jobTitle)
-                intent.putExtra("description", jobPost.description)
-                intent.putExtra("qualification", jobPost.qualification)
-                intent.putExtra("experience", jobPost.experience)
-                startActivity(intent)
-            }
+//            holder.applyButton.setOnClickListener {
+//                // Start the ApplyActivity with the job post ID as an intent extra
+//                    val intent = Intent(this@ApplyUser, ApplyActivity::class.java)
+//                intent.putExtra("jobPostId", jobPost.id)
+//                intent.putExtra("jobTitle", jobPost.jobTitle)
+//                intent.putExtra("description", jobPost.description)
+//                intent.putExtra("qualification", jobPost.qualification)
+//                intent.putExtra("experience", jobPost.experience)
+//                startActivity(intent)
+//            }
         }
 
         override fun getItemCount() = jobList.size
 
-        fun setJobs(jobList: List<Job>) {
+        fun setJobs(jobList: MutableList<JobApplication>) {
             this.jobList = jobList
             notifyDataSetChanged()
         }
 
         inner class JobViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
             val title: TextView = itemView.findViewById(R.id.job_title)
-            val description: TextView = itemView.findViewById(R.id.job_description)
-            val qualification: TextView = itemView.findViewById(R.id.qualification)
             val experience : TextView = itemView.findViewById(R.id.job_experience)
-            val applyButton: ImageButton = itemView.findViewById(R.id.apply_button)
+            val email : TextView = itemView.findViewById(R.id.job_email)
+            val cvUrl : TextView = itemView.findViewById(R.id.job_cv)
+
         }
     }
 }
+
+
+

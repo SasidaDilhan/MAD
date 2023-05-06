@@ -22,6 +22,7 @@ class Company_Profile : AppCompatActivity() {
         val createAdd_btn = findViewById<Button>(R.id.create)
         val viewAdd_btn = findViewById<Button>(R.id.AddView)
         val profileView = findViewById<Button>(R.id.Com_Profile)
+        val viewapplyuser = findViewById<Button>(R.id.btnAppliedUser)
 
      val currentUser = intent.getStringExtra("email_user")
         //Intialize firebase and fireStore
@@ -53,6 +54,10 @@ class Company_Profile : AppCompatActivity() {
 
         profileView.setOnClickListener {
             val intent = Intent(this, CompanyProfileDisplay::class.java)
+            startActivity(intent)
+        }
+        viewapplyuser.setOnClickListener {
+            val intent = Intent(this, ApplyUser::class.java)
             startActivity(intent)
         }
 
