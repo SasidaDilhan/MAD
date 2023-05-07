@@ -33,7 +33,7 @@ class UpdateCompanyProfile : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_update_user_profile)
+        setContentView(R.layout.activity_update_company_profile2)
 
         auth = FirebaseAuth.getInstance()
         db = FirebaseFirestore.getInstance()

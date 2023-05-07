@@ -17,8 +17,11 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:text="Edit Profile"
-        android:textColor="@color/black"
-        android:textSize="40sp"
+        android:layout_gravity="center"
+        android:textColor="@color/newcolor"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        android:layout_marginBottom="60dp"
         />
 
 
@@ -26,7 +29,7 @@
         android:id="@+id/d_edtname"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Full Name :"
+        android:text="Company Name :"
         />
     <EditText
         android:id="@+id/ed_name"
@@ -39,7 +42,7 @@
         android:id="@+id/d_edtemail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="E-Mail: "
+        android:text="Company E-Mail: "
         />
     <EditText
         android:id="@+id/ed_email"
@@ -51,7 +54,7 @@
         android:id="@+id/d_edtphone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Phone Number : "
+        android:text="Company Phone Number : "
         />
 
     <EditText
@@ -66,7 +69,7 @@
         android:id="@+id/d_edtaddress"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Address"
+        android:text="Company Address"
         />
     <EditText
         android:id="@+id/ed_address"
@@ -78,7 +81,7 @@
         android:id="@+id/d_edpassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Password "
+        android:text="Company Registration Number : "
         />
     <EditText
         android:id="@+id/ed_password"
