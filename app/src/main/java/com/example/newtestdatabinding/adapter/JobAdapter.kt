@@ -4,6 +4,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.newtestdatabinding.R
@@ -55,7 +56,7 @@ class JobAdapter(private val listener: OnJobClickListener) : RecyclerView.Adapte
         val txtDescription: TextView = itemView.findViewById(R.id.tv_description)
         val txtQualification: TextView = itemView.findViewById(R.id.tv_qualification)
         val txtExperience: TextView = itemView.findViewById(R.id.tv_experience)
-        val btnEditAdd : Button = itemView.findViewById(R.id.btn_edit)
-        val deletebtn : Button = itemView.findViewById(R.id.btn_delete)
+        val btnEditAdd : ImageView = itemView.findViewById(R.id.btn_edit)
+        val deletebtn : ImageView = itemView.findViewById(R.id.btn_delete)
     }
 }

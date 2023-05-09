@@ -14,6 +14,7 @@
         android:orientation="vertical"
         android:layout_gravity="center"
         android:padding="20dp"
+        android:layout_marginBottom="20dp"
         tools:context=".activities.user.Login_Change">
 
         <TextView
@@ -49,6 +50,7 @@
             android:background="@drawable/button_preset2"
             android:text="COMPANY"
             android:textSize="20sp"
+            android:layout_marginBottom="10dp"
             android:id="@+id/company_login"
             android:textColor="@color/white"
             android:layout_gravity="center"

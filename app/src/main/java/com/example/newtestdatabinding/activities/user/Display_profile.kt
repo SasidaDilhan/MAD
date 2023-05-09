@@ -7,6 +7,6 @@ import com.example.newtestdatabinding.R
 class Display_profile : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_display_profile)
+        setContentView(R.layout.activity_landin_user)
     }
 }
