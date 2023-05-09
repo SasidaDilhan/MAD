@@ -16,19 +16,20 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:text="Edit Profile"
+        android:layout_marginTop="20dp"
         android:textColor="@color/newcolor"
         android:textStyle="bold"
-        android:layout_gravity="center"
+
         android:layout_marginBottom="60dp"
         android:textSize="40sp"
         />
-    <ImageView
-        android:id="@+id/dlt_profile"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:src="@drawable/baseline_delete_24"
-        android:layout_marginLeft="280dp"
-        />
+<!--    <ImageView-->
+<!--        android:id="@+id/dlt_profile"-->
+<!--        android:layout_width="30dp"-->
+<!--        android:layout_height="30dp"-->
+<!--        android:src="@drawable/baseline_delete_24"-->
+<!--        android:layout_marginLeft="280dp"-->
+<!--        />-->
 
 <LinearLayout
     android:layout_width="match_parent"
@@ -130,11 +131,11 @@
 
             />
         <Button
-            android:id="@+id/cnsl_profile"
+            android:id="@+id/dlt_profile"
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:background="@drawable/button_cancel"
-            android:text="Cancel"
+            android:text="Delete"
             android:textColor="@color/white"
             android:textSize="15sp"
             android:layout_marginLeft="30dp"

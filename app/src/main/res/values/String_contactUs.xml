@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="contact_us">Contact US</string>
-    <string name="con_git"><b>GIT : </b>Yo_Way/Git</string>
+    <string name="con_git">Yo_Way/Git</string>
 <!--    <string name="email1"><b>E-mail : </b>yoway@gmail.com</string>-->
-    <string name="fb"><b>Face Book :</b>Binary 4</string>
-    <string name="linkedIn"><b>LinkedIn :</b> Yo-Way.LinkedIn.com</string>
+    <string name="fb">Binary 4</string>
+    <string name="linkedIn"> Yo-Way.LinkedIn.com</string>
     <string name="und_txt"><![CDATA[Contact us & Let\'s Collabarate !]]></string>
     <string name="txt_und">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
         ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient

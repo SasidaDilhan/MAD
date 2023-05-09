@@ -1,100 +1,133 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-
 <ScrollView xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:android="http://schemas.android.com/apk/res/android">
-
-
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    >
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
         tools:context=".activities.company.Company_Profile"
-        android:padding="20dp"
+       android:layout_gravity="center"
         android:background="@color/newcolorback">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/bussiness_name"
-            android:textSize="40sp"
-            android:id="@+id/busi_title"
-            android:textColor="@color/title"
-            android:textStyle="bold"
-            android:layout_gravity="center"
-            />
+       <LinearLayout
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:orientation="horizontal"
+           android:padding="20dp"
+           >
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="@string/bussiness_name"
+               android:textSize="40sp"
+               android:id="@+id/busi_title"
+               android:textColor="@color/title"
+               android:textStyle="bold"
+               />
+           <ImageView
+               android:id="@+id/Com_Profile"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:src="@drawable/baseline_person_24"
+               android:layout_gravity="center"
+               android:layout_marginLeft="80dp"
+               />
+           <ImageView
+               android:id="@+id/btnLogout"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:src="@drawable/baseline_logout_24_2"
+               android:layout_gravity="center"
+               android:layout_marginLeft="10dp"
+               />
+       </LinearLayout>
 
         <ImageView
             android:layout_width="wrap_content"
-            android:layout_height="371dp"
+            android:layout_height="match_parent"
             android:src="@drawable/welcome" />
 
 
+
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        >
+
         <Button
             android:id="@+id/create"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/busi_title"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="40dp"
-            android:background="@drawable/button_preset"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@drawable/button_preset_btn3"
+            android:drawableTop="@drawable/baseline_post_add_24"
+            android:paddingVertical="20dp"
             android:text="@string/create_add"
             android:textColor="@color/white"
-            android:textSize="20sp" />
+            android:layout_marginBottom="20dp"
+            android:textSize="12sp" />
 
         <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/create"
-            android:layout_centerHorizontal="true"
-            android:background="@drawable/button_preset"
-            android:layout_marginTop="30dp"
             android:id="@+id/AddView"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@drawable/button_preset_btn3"
+            android:drawableTop="@drawable/baseline_view_week_24"
             android:text="@string/view_adds"
             android:textColor="@color/white"
-            android:textSize="20sp"
-            />
+            android:paddingVertical="20dp"
+            android:layout_marginHorizontal="10dp"
+            android:textSize="12sp" />
 
         <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/AddView"
-            android:layout_centerHorizontal="true"
-            android:background="@drawable/button_preset"
-            android:layout_marginTop="30dp"
-            android:id="@+id/Com_Profile"
+            android:id="@+id/btnAppliedUser"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:paddingVertical="20dp"
+            android:drawableTop="@drawable/baseline_playlist_add_check_24_2"
+            android:background="@drawable/button_preset_btn3"
             android:text="Profile"
             android:textColor="@color/white"
-            android:textSize="20sp"
-            />
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/button_preset"
-            android:layout_below="@id/AddView"
-            android:layout_marginTop="20dp"
-            android:text="logout"
-            android:textSize="20sp"
-            android:textColor="@color/white"
-            android:id="@+id/btnLogout"
-            />
-
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/button_preset"
-            android:layout_below="@id/AddView"
-            android:layout_marginTop="20dp"
-            android:text="user"
-            android:textSize="20sp"
-            android:textColor="@color/white"
-            android:id="@+id/btnAppliedUser"
-            />
+            android:textSize="12sp" />
 
 
+    </LinearLayout>
 
+
+</LinearLayout>
+<!--        <Button-->
+<!--            android:layout_width="150dp"-->
+<!--            android:layout_height="47dp"-->
+<!--            android:background="@drawable/button_preset"-->
+<!--            android:layout_marginTop="20dp"-->
+<!--            android:text="logout"-->
+<!--            android:layout_gravity="center"-->
+<!--            android:textSize="20sp"-->
+<!--            android:textColor="@color/white"-->
+<!--           -->
+<!--            />-->
+
+<!--        <Button-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:background="@drawable/button_preset"-->
+<!--            android:layout_below="@id/AddView"-->
+<!--            android:layout_marginTop="20dp"-->
+<!--            android:text="user"-->
+<!--            android:textSize="20sp"-->
+<!--            android:textColor="@color/white"-->
+<!--            -->
+<!--            />-->
 
 
     </LinearLayout>

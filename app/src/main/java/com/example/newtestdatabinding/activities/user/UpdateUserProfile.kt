@@ -28,8 +28,8 @@ class UpdateUserProfile : AppCompatActivity() {
     private lateinit var edtAddress : EditText
     private lateinit var edtPassword : EditText
     private lateinit var saveButton : Button
-    private lateinit var cancelBtn : Button
-    private lateinit var deleteProfile:ImageView
+//    private lateinit var cancelBtn : Button
+    private lateinit var deleteProfile:Button
     private lateinit var progressBar: ProgressBar
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -44,7 +44,7 @@ class UpdateUserProfile : AppCompatActivity() {
         edtPhone = findViewById(R.id.ed_phone)
         edtAddress = findViewById(R.id.ed_address)
         saveButton = findViewById(R.id.edt_profile)
-        cancelBtn = findViewById(R.id.cnsl_profile)
+//        cancelBtn = findViewById(R.id.cnsl_profile)
         edtPassword = findViewById(R.id.ed_password)
         deleteProfile = findViewById(R.id.dlt_profile)
 //        progressBar = findViewById(R.id.pr)
@@ -75,10 +75,10 @@ class UpdateUserProfile : AppCompatActivity() {
 
             Toast.makeText(this, "Successfully Edited!!", Toast.LENGTH_SHORT).show()
         }
-        cancelBtn.setOnClickListener{
-            val intent = Intent(this, AddViewUser::class.java)
-            startActivity(intent)
-        }
+//        cancelBtn.setOnClickListener{
+//            val intent = Intent(this, AddViewUser::class.java)
+//            startActivity(intent)
+//        }
 
         deleteProfile.setOnClickListener{
 

@@ -5,7 +5,7 @@
     <dimen name="about_marg">40dp</dimen>
     <dimen name="marg_top">40dp</dimen>
     <dimen name="marg_left">40dp</dimen>
-    <dimen name="about_text2">20sp</dimen>
+    <dimen name="about_text2">15sp</dimen>
     <dimen name="marg_left2">50dp</dimen>
     <dimen name="marg_top3">35dp</dimen>
 </resources>
