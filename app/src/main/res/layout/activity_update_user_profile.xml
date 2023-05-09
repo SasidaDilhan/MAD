@@ -6,32 +6,50 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-
     tools:context=".activities.user.ProfileDisplay"
     android:padding="20dp"
     >
+
     <TextView
         android:id="@+id/welcomettledt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:text="Edit Profile"
-        android:textColor="@color/black"
+        android:textColor="@color/newcolor"
+        android:textStyle="bold"
+        android:layout_gravity="center"
+        android:layout_marginBottom="60dp"
         android:textSize="40sp"
         />
+    <ImageView
+        android:id="@+id/dlt_profile"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/baseline_delete_24"
+        android:layout_marginLeft="280dp"
+        />
 
-
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:background="@drawable/rounded_corner"
+    >
     <TextView
         android:id="@+id/d_edtname"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Full Name :"
+        android:textStyle="bold"
+        android:textColor="@color/black"
         />
     <EditText
         android:id="@+id/ed_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-
+        android:layout_marginBottom="20dp"
         />
 
     <TextView
@@ -39,11 +57,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="E-Mail: "
+        android:textStyle="bold"
+        android:textColor="@color/black"
         />
     <EditText
         android:id="@+id/ed_email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
         />
 
     <TextView
@@ -51,13 +72,15 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Phone Number : "
+        android:textStyle="bold"
+        android:textColor="@color/black"
         />
 
     <EditText
         android:id="@+id/ed_phone"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-
+        android:layout_marginBottom="20dp"
         />
 
 
@@ -66,18 +89,22 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Address"
+        android:textStyle="bold"
+        android:textColor="@color/black"
         />
     <EditText
         android:id="@+id/ed_address"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-
+        android:layout_marginBottom="20dp"
         />
     <TextView
         android:id="@+id/d_edpassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Password "
+        android:textStyle="bold"
+        android:textColor="@color/black"
         />
     <EditText
         android:id="@+id/ed_password"
@@ -85,33 +112,36 @@
         android:layout_height="wrap_content"
         app:passwordToggleEnabled="true"
         />
-
-    <Button
-        android:id="@+id/edt_profile"
-        android:layout_width="200dp"
-        android:layout_marginTop="40dp"
+    <LinearLayout
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/button_preset"
+        android:orientation="horizontal"
+        android:layout_marginTop="50dp"
         android:layout_gravity="center"
-        android:text="Save"
-        android:textColor="@color/white"
-        android:textSize="15sp"
-        />
-    <Button
-        android:id="@+id/cnsl_profile"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:background="@drawable/button_cancel"
-        android:layout_gravity="center"
-        android:text="Cancel"
-        android:textColor="@color/white"
-        android:layout_marginTop="20dp"
-        android:textSize="15sp"
-        />
+        >
+        <Button
+            android:id="@+id/edt_profile"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_preset"
+            android:text="Save"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+
+            />
+        <Button
+            android:id="@+id/cnsl_profile"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_cancel"
+            android:text="Cancel"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:layout_marginLeft="30dp"
+            />
+    </LinearLayout>
 
 
-
-
-
+</LinearLayout>
 
 </LinearLayout>

@@ -14,7 +14,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Apply Job"
-            android:textColor="@color/purple_700"
+            android:textColor="@color/newcolor"
             android:layout_gravity="center"
             android:textSize="30sp"
             android:textStyle="bold"
@@ -109,40 +109,52 @@
             android:textColor="@color/black"
             android:textSize="20sp"
             android:text="Upload CV:" />
+
         <Button
             android:id="@+id/btn_choose"
-            android:layout_width="200dp"
+            android:layout_width="120dp"
             android:layout_height="wrap_content"
             android:text="Choose File"
             android:layout_marginTop="8dp"
             android:textColor="@color/white"
+            android:textSize="15sp"
             android:layout_marginBottom="16dp"
-            android:background="@drawable/button_preset_cv"/>
-
-
-
-        <Button
-            android:id="@+id/btn_apply"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Apply"
-            android:textColor="@color/white"
-            android:background="@drawable/button_preset"
-            android:textSize="20sp"
-            android:layout_marginTop="16dp"
+            android:background="@color/User"
             />
 
-        <Button
-            android:id="@+id/btn_cancel"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Cancel"
-            android:textColor="@color/white"
-            android:background="@drawable/button_cancel"
-            android:textSize="20sp"
-            android:layout_marginTop="16dp"
 
-            />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            >
+
+            <Button
+                android:id="@+id/btn_apply"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:text="Apply"
+                android:textColor="@color/white"
+                android:background="@drawable/button_preset"
+                android:textSize="20sp"
+                android:layout_marginTop="16dp"
+                />
+
+            <Button
+                android:id="@+id/btn_cancel"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:text="Cancel"
+                android:textColor="@color/white"
+                android:background="@drawable/button_cancel"
+                android:textSize="20sp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="16dp"
+
+                />
+        </LinearLayout>
 
 
 

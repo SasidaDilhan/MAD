@@ -5,10 +5,12 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import android.widget.ImageView
 import android.widget.ProgressBar
 import android.widget.Toast
 import androidx.databinding.adapters.TextViewBindingAdapter.setText
 import com.example.newtestdatabinding.R
+import com.example.newtestdatabinding.activities.company.AdListActivity
 import com.example.newtestdatabinding.activities.company.EditJobActivity
 import com.example.newtestdatabinding.model.Job
 import com.google.firebase.auth.FirebaseAuth
@@ -27,7 +29,7 @@ class UpdateUserProfile : AppCompatActivity() {
     private lateinit var edtPassword : EditText
     private lateinit var saveButton : Button
     private lateinit var cancelBtn : Button
-
+    private lateinit var deleteProfile:ImageView
     private lateinit var progressBar: ProgressBar
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -44,6 +46,7 @@ class UpdateUserProfile : AppCompatActivity() {
         saveButton = findViewById(R.id.edt_profile)
         cancelBtn = findViewById(R.id.cnsl_profile)
         edtPassword = findViewById(R.id.ed_password)
+        deleteProfile = findViewById(R.id.dlt_profile)
 //        progressBar = findViewById(R.id.pr)
 
 
@@ -73,8 +76,23 @@ class UpdateUserProfile : AppCompatActivity() {
             Toast.makeText(this, "Successfully Edited!!", Toast.LENGTH_SHORT).show()
         }
         cancelBtn.setOnClickListener{
-            val intent = Intent(this, ProfileDisplay::class.java)
+            val intent = Intent(this, AddViewUser::class.java)
             startActivity(intent)
+        }
+
+        deleteProfile.setOnClickListener{
+
+            val intent = Intent(this, UserLogin::class.java)
+            startActivity(intent)
+
+            val usrId = FirebaseAuth.getInstance().currentUser!!.uid
+            db.collection("App_users").document(usrId).delete()
+                .addOnSuccessListener {
+                    Toast.makeText(this, "successfully deleted!!",Toast.LENGTH_SHORT).show()
+                }
+                .addOnFailureListener{
+                    Toast.makeText(this, "Failiure in delete",Toast.LENGTH_SHORT).show()
+                }
         }
     }
 

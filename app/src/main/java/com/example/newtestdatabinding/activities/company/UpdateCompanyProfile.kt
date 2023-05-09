@@ -74,7 +74,7 @@ class UpdateCompanyProfile : AppCompatActivity() {
             Toast.makeText(this, "Successfully Edited!!", Toast.LENGTH_SHORT).show()
         }
         cancelBtn.setOnClickListener{
-            val intent = Intent(this, ProfileDisplay::class.java)
+            val intent = Intent(this, CompanyProfileDisplay::class.java)
             startActivity(intent)
         }
     }

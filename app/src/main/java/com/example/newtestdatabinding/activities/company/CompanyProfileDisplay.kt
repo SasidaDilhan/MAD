@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.ImageButton
 import android.widget.TextView
 import android.widget.Toast
 import com.example.newtestdatabinding.R
@@ -22,14 +23,14 @@ class CompanyProfileDisplay : AppCompatActivity() {
     private lateinit var disp_cphone: TextView
     private lateinit var disp_caddress: TextView
     private lateinit var disp_cregis : TextView
-    private lateinit var editProfile:Button
+    private lateinit var editProfile:ImageButton
     private lateinit var deletecProfile : Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_company_profile_display)
 
-        val CprofEdit = findViewById<Button>(R.id.edt_Cprofile)
+        val CprofEdit = findViewById<ImageButton>(R.id.edt_Cprofile)
 
         auth = FirebaseAuth.getInstance()
         db = FirebaseFirestore.getInstance()

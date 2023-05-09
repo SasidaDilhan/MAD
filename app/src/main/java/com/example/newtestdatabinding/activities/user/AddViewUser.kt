@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.ImageButton
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -19,14 +20,22 @@ class AddViewUser : AppCompatActivity() {
 
     private lateinit var recyclerView: RecyclerView
     private lateinit var jobAdapter: JobAdapter
+    private lateinit var profileButton:ImageView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_add_view_user)
 
+        profileButton = findViewById(R.id.profile_btn)
+        profileButton.setOnClickListener{
+            val intent = Intent(this, ProfileDisplay::class.java)
+            startActivity(intent)
+        }
+
         // Initialize RecyclerView
         recyclerView = findViewById(R.id.recyclerView)
         recyclerView.layoutManager = LinearLayoutManager(this)
+
 
         // Create the job adapter and set it on the RecyclerView
         jobAdapter = JobAdapter(listOf())
@@ -67,6 +76,8 @@ class AddViewUser : AppCompatActivity() {
             val view = LayoutInflater.from(parent.context)
                 .inflate(R.layout.job_list_user, parent, false)
             return JobViewHolder(view)
+
+
         }
 
         override fun onBindViewHolder(holder: JobViewHolder, position: Int) {
@@ -89,6 +100,7 @@ class AddViewUser : AppCompatActivity() {
                 intent.putExtra("experience", jobPost.experience)
                 startActivity(intent)
             }
+
         }
 
         override fun getItemCount() = jobList.size
@@ -103,7 +115,8 @@ class AddViewUser : AppCompatActivity() {
             val description: TextView = itemView.findViewById(R.id.job_description)
             val qualification: TextView = itemView.findViewById(R.id.qualification)
             val experience : TextView = itemView.findViewById(R.id.job_experience)
-            val applyButton: ImageButton = itemView.findViewById(R.id.apply_button)
+            val applyButton: ImageView = itemView.findViewById(R.id.apply_button)
         }
     }
+
 }
