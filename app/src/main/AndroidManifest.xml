@@ -93,6 +93,18 @@
         <activity
             android:name=".activities.user.MainActivity"
             android:exported="false" />
+        <activity
+            android:name=".activities.user.UserLandingPageActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.user.ResumeDashboardActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.user.MyCVActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.user.ResumeFormActivity"
+            android:exported="false" />
     </application>
 
 </manifest>
