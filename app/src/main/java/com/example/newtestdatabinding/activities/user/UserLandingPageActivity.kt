@@ -45,7 +45,8 @@ class UserLandingPageActivity : AppCompatActivity() {
         }
 
         ViewProfileTile.setOnClickListener {
-
+            val intent = Intent(this, AddViewUser::class.java)
+            startActivity(intent)
 //
         }
 

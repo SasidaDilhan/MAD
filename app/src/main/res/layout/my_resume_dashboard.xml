@@ -187,7 +187,6 @@
                     android:orientation="vertical">
 
                     <ImageView
-                        android:onClick="PlaceOrdrr"
                         android:layout_width="130dp"
                         android:layout_height="100dp"
                         android:src="@drawable/resume3"
