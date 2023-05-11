@@ -301,4 +301,9 @@ class MyCVActivity : AppCompatActivity() {
         }
     }
 
+    fun editable() {
+
+        isEditable = true
+    }
+
 }

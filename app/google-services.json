@@ -1,13 +1,14 @@
 {
   "project_info": {
     "project_number": "173538269804",
+    "firebase_url": "https://login-register-firebase-f9068-default-rtdb.firebaseio.com",
     "project_id": "login-register-firebase-f9068",
     "storage_bucket": "login-register-firebase-f9068.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:173538269804:android:6ddecc0abb26bb96fbd649",
+        "mobilesdk_app_id": "1:173538269804:android:7a06a1957092e9f9fbd649",
         "android_client_info": {
           "package_name": "com.example.newtestdatabinding"
         }

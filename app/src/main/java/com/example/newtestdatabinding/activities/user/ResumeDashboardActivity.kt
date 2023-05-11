@@ -92,8 +92,8 @@ class ResumeDashboardActivity : AppCompatActivity() {
 
         editResumeTile.setOnClickListener {
 
-//            val intent = Intent(this, AppliedJobsActivity::class.java)
-//            startActivity(intent)
+            //val intent = Intent(this, MyCVActivity().editable()::class.java)
+            //startActivity(intent)
         }
     }
 
