@@ -15,13 +15,20 @@
         tools:targetApi="31"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".activities.user.Contact_Us"
+            android:exported="false" />
+        <activity
+            android:name=".activities.user.Display_profile"
+            android:exported="false" />
+        <activity
+            android:name=".activities.company.ApplyUser"
+            android:exported="false" />
+        <activity
             android:name=".activities.user.ApplyActivity"
             android:exported="false" />
         <activity
             android:name=".activities.user.AddViewUser"
-            android:exported="false" >
-
-        </activity>
+            android:exported="false" />
         <activity
             android:name=".activities.company.UpdateCompanyProfile"
             android:exported="false" />

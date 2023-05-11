@@ -4,6 +4,8 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.ImageButton
+import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import com.example.newtestdatabinding.R
@@ -22,7 +24,8 @@ class ProfileDisplay : AppCompatActivity() {
     private lateinit var disp_email: TextView
     private lateinit var disp_phone: TextView
     private lateinit var disp_address: TextView
-    private lateinit var deleteProfile : Button
+//    private lateinit var deleteProfile : Button
+    private lateinit var editProfile:ImageButton
 
 
 
@@ -30,7 +33,7 @@ class ProfileDisplay : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_profile_display)
 
-        val profEdit = findViewById<Button>(R.id.edt_profile)
+
 
         auth = FirebaseAuth.getInstance()
         db = FirebaseFirestore.getInstance()
@@ -39,7 +42,8 @@ class ProfileDisplay : AppCompatActivity() {
         disp_email = findViewById(R.id.d_email)
         disp_phone = findViewById(R.id.d_phone)
         disp_address = findViewById(R.id.d_address)
-        deleteProfile = findViewById(R.id.dlt_profile)
+//        deleteProfile = findViewById(R.id.dlt_profile)
+        editProfile = findViewById(R.id.edt_profile)
 
         val usrId = FirebaseAuth.getInstance().currentUser!!.uid
         val ref = db.collection("App_users").document(usrId)
@@ -62,25 +66,25 @@ class ProfileDisplay : AppCompatActivity() {
                 Toast.makeText(this, "Faild!!", Toast.LENGTH_SHORT).show()
             }
 
-        profEdit.setOnClickListener{
+        editProfile.setOnClickListener{
             val intent = Intent(this, UpdateUserProfile::class.java)
             startActivity(intent)
         }
 
-        deleteProfile.setOnClickListener{
-
-            val intent = Intent(this, UserLogin::class.java)
-               startActivity(intent)
-
-            val usrId = FirebaseAuth.getInstance().currentUser!!.uid
-            db.collection("App_users").document(usrId).delete()
-                .addOnSuccessListener {
-                    Toast.makeText(this, "successfully deleted!!",Toast.LENGTH_SHORT).show()
-                }
-                .addOnFailureListener{
-                    Toast.makeText(this, "Failiure in delete",Toast.LENGTH_SHORT).show()
-                }
-        }
+//        deleteProfile.setOnClickListener{
+//
+//            val intent = Intent(this, UserLogin::class.java)
+//               startActivity(intent)
+//
+//            val usrId = FirebaseAuth.getInstance().currentUser!!.uid
+//            db.collection("App_users").document(usrId).delete()
+//                .addOnSuccessListener {
+//                    Toast.makeText(this, "successfully deleted!!",Toast.LENGTH_SHORT).show()
+//                }
+//                .addOnFailureListener{
+//                    Toast.makeText(this, "Failiure in delete",Toast.LENGTH_SHORT).show()
+//                }
+//        }
 
     }
 

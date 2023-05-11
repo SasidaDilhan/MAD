@@ -22,7 +22,8 @@
             android:layout_height="wrap_content"
             android:text="User Register"
             android:textSize="50sp"
-            android:textColor="@color/black"
+            android:textColor="@color/newcolor"
+            android:textStyle="bold"
             android:layout_marginBottom="20dp"
             />
 
@@ -137,12 +138,25 @@
             android:background="@drawable/button_preset"
             android:textSize="20sp"
             />
-        <TextView
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textViewR1"
+                android:text="@string/have_you_account_login"
+                android:layout_marginTop="50px"
+                /><TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/textViewR"
-            android:text="@string/have_you_account_login"
+            android:text="Login"
             android:layout_marginTop="50px"
+            android:textColor="@color/letter_title"
             />
+
+        </LinearLayout>
     </LinearLayout>
 </ScrollView>

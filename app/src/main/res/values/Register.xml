@@ -2,5 +2,5 @@
 <resources>
     <string name="register">Company Register</string>
     <string name="re_enter_password">Re-Enter Password</string>
-    <string name="have_you_account_login">Have You Account? Login</string>
+    <string name="have_you_account_login">Have You Account?</string>
 </resources>

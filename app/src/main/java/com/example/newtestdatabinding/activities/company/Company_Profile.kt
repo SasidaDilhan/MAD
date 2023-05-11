@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.ImageView
 import com.example.newtestdatabinding.R
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
@@ -18,10 +19,11 @@ class Company_Profile : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_company_profile)
 
-        val logoutBtn = findViewById<Button>(R.id.btnLogout)
+        val logoutBtn = findViewById<ImageView>(R.id.btnLogout)
         val createAdd_btn = findViewById<Button>(R.id.create)
         val viewAdd_btn = findViewById<Button>(R.id.AddView)
-        val profileView = findViewById<Button>(R.id.Com_Profile)
+        val profileView = findViewById<ImageView>(R.id.Com_Profile)
+        val viewapplyuser = findViewById<Button>(R.id.btnAppliedUser)
 
      val currentUser = intent.getStringExtra("email_user")
         //Intialize firebase and fireStore
@@ -53,6 +55,10 @@ class Company_Profile : AppCompatActivity() {
 
         profileView.setOnClickListener {
             val intent = Intent(this, CompanyProfileDisplay::class.java)
+            startActivity(intent)
+        }
+        viewapplyuser.setOnClickListener {
+            val intent = Intent(this, ApplyUser::class.java)
             startActivity(intent)
         }
 

@@ -7,144 +7,163 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="16dp">
+        android:padding="16dp"
+        android:background="@color/secondry"
+        >
 
         <TextView
             android:id="@+id/apply_textTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Apply Job"
-            android:textColor="@color/purple_700"
+            android:textColor="@color/newcolor"
             android:layout_gravity="center"
             android:textSize="30sp"
             android:textStyle="bold"
             android:layout_marginTop="20dp"
+            android:layout_marginBottom="30dp"
 
             />
 
-        <TextView
-            android:id="@+id/apply_joTitle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:textSize="20sp"
-            android:textColor="@color/black"
-            android:text="Job Title :" />
-
-        <TextView
-            android:id="@+id/apply_Title"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="text"
-            android:layout_marginTop="8dp"
-            android:layout_marginBottom="16dp"/>
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@drawable/rounded_corner"
+            android:padding="20dp"
+            >
+            <TextView
+                android:id="@+id/apply_joTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:textSize="15sp"
+                android:textColor="@color/black"
+                android:text="Job Title :" />
 
-        <TextView
-            android:id="@+id/apply_exp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="@color/black"
-            android:textSize="20sp"
-            android:text="Experience :" />
+            <TextView
+                android:id="@+id/apply_Title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="16dp"/>
 
-        <TextView
-            android:id="@+id/apply_jobExperience"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:layout_marginBottom="16dp"/>
-        <TextView
-            android:id="@+id/apply_desc"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textColor="@color/black"
-            android:textSize="20sp"
-            android:text="Description :" />
+            <TextView
+                android:id="@+id/apply_exp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:text="Experience :" />
 
-        <TextView
-            android:id="@+id/apply_description"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:layout_marginBottom="16dp"/>
+            <TextView
+                android:id="@+id/apply_jobExperience"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="16dp"/>
+            <TextView
+                android:id="@+id/apply_desc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:text="Description :" />
 
-        <TextView
-            android:id="@+id/apply_mail"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textColor="@color/black"
-            android:textSize="20sp"
-            android:text="E-Mail :" />
+            <TextView
+                android:id="@+id/apply_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="16dp"/>
 
-        <TextView
-            android:id="@+id/apply_e_mail"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="text"
-            android:layout_marginTop="8dp"
-            android:layout_marginBottom="16dp"/>
+            <TextView
+                android:id="@+id/apply_mail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:text="E-Mail :" />
 
-        <TextView
-            android:id="@+id/apply_quali"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textColor="@color/black"
-            android:textSize="20sp"
-            android:text="Qualification :" />
+            <EditText
+                android:id="@+id/apply_e_mail"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:inputType="text"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="16dp"/>
 
-        <TextView
-            android:id="@+id/apply_qualification"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="text"
-            android:layout_marginTop="8dp"
-            android:layout_marginBottom="16dp"/>
+            <TextView
+                android:id="@+id/apply_quali"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:text="Qualification :" />
 
+            <TextView
+                android:id="@+id/apply_qualification"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="16dp"/>
 
+            <TextView
+                android:id="@+id/apply_cv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:text="Upload CV:" />
 
-        <TextView
-            android:id="@+id/apply_cv"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textColor="@color/black"
-            android:textSize="20sp"
-            android:text="Upload CV:" />
-        <Button
-            android:id="@+id/btn_choose"
-            android:layout_width="200dp"
-            android:layout_height="wrap_content"
-            android:text="Choose File"
-            android:layout_marginTop="8dp"
-            android:textColor="@color/white"
-            android:layout_marginBottom="16dp"
-            android:background="@drawable/button_preset_cv"/>
+            <Button
+                android:id="@+id/btn_choose"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:text="Choose File"
+                android:layout_marginTop="8dp"
+                android:textColor="@color/white"
+                android:textSize="10sp"
+                android:layout_marginBottom="16dp"
+                android:background="@color/User"
+                />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="30dp"
+                >
 
+                <Button
+                    android:id="@+id/btn_apply"
+                    android:layout_width="120dp"
+                    android:layout_height="40dp"
+                    android:text="Apply"
+                    android:textColor="@color/white"
+                    android:background="@drawable/button_preset"
+                    android:textSize="15sp"
+                    android:layout_marginTop="16dp"
+                    />
 
+                <Button
+                    android:id="@+id/btn_cancel"
+                    android:layout_width="120dp"
+                    android:layout_height="40dp"
+                    android:text="Cancel"
+                    android:textColor="@color/white"
+                    android:background="@drawable/button_cancel"
+                    android:textSize="15sp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="16dp"
 
-        <Button
-            android:id="@+id/btn_apply"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Apply"
-            android:textColor="@color/white"
-            android:background="@drawable/button_preset"
-            android:textSize="20sp"
-            android:layout_marginTop="16dp"
-            />
+                    />
+            </LinearLayout>
 
-        <Button
-            android:id="@+id/btn_cancel"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Cancel"
-            android:textColor="@color/white"
-            android:background="@drawable/button_cancel"
-            android:textSize="20sp"
-            android:layout_marginTop="16dp"
-
-            />
-
-
+        </LinearLayout>
 
     </LinearLayout>
 </ScrollView>

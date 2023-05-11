@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.ImageButton
 import android.widget.TextView
 import android.widget.Toast
 import com.example.newtestdatabinding.R
@@ -22,13 +23,14 @@ class CompanyProfileDisplay : AppCompatActivity() {
     private lateinit var disp_cphone: TextView
     private lateinit var disp_caddress: TextView
     private lateinit var disp_cregis : TextView
+    private lateinit var editProfile:ImageButton
     private lateinit var deletecProfile : Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_company_profile_display)
 
-        val CprofEdit = findViewById<Button>(R.id.edt_Cprofile)
+        val CprofEdit = findViewById<ImageButton>(R.id.edt_Cprofile)
 
         auth = FirebaseAuth.getInstance()
         db = FirebaseFirestore.getInstance()
@@ -39,6 +41,7 @@ class CompanyProfileDisplay : AppCompatActivity() {
         disp_caddress = findViewById(R.id.cmp_address)
         disp_cregis = findViewById(R.id.cmp_regiseterNum)
         deletecProfile = findViewById(R.id.dlt_Cprofile)
+        editProfile = findViewById(R.id.edt_Cprofile)
 
         val usrId = FirebaseAuth.getInstance().currentUser!!.uid
         val ref = db.collection("users").document(usrId)
@@ -78,6 +81,10 @@ class CompanyProfileDisplay : AppCompatActivity() {
                 .addOnFailureListener{
                     Toast.makeText(this, "Failiure in delete",Toast.LENGTH_SHORT).show()
                 }
+        }
+        editProfile.setOnClickListener {
+            val intent = Intent(this, UpdateCompanyProfile::class.java)
+            startActivity(intent)
         }
 
     }
